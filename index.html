@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen ❤️ From Your Akka Sindhu</title>
+    <meta name="description"
+        content="A heartfelt surprise from Sindhu to her beloved brother Praveen - filled with love, memories, and voice messages">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CINEMATIC MOVIE INTRO -->
+    <div id="cinematic-intro">
+        <div class="intro-slides">
+            <div class="intro-slide active" style="background-image: url('images/classroom_board.jpg')"></div>
+            <div class="intro-slide" style="background-image: url('images/graduation1.jpg')"></div>
+            <div class="intro-slide" style="background-image: url('images/college_together.jpg')"></div>
+        </div>
+        <div class="intro-overlay"></div>
+        <div class="intro-vignette"></div>
+        <div class="intro-content">
+            <div class="intro-text intro-text-1">A story written in the stars...</div>
+            <div class="intro-text intro-text-2">A bond that can never break... ಅಕ್ಕ ಮತ್ತು ಅಣ್ಣ ❤️</div>
+            <div class="intro-text intro-text-3">
+                <span class="intro-names">Sindhu & Praveen</span>
+            </div>
+        </div>
+        <div class="intro-film-grain"></div>
+        <div class="intro-letterbox intro-letterbox-top"></div>
+        <div class="intro-letterbox intro-letterbox-bottom"></div>
+        <button id="skip-intro" class="skip-intro-btn">Skip Intro ▶</button>
+    </div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="heartbeat-icon">❤️</div>
+            <p class="preloader-text">Loading something special for you...</p>
+            <div class="preloader-bar">
+                <div class="preloader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING PARTICLES CANVAS -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- AUDIO PROMPT -->
+    <div id="audio-prompt" class="audio-prompt">
+        <div class="audio-prompt-content">
+            <div class="audio-prompt-icon">🎧</div>
+            <h2>Hey Praveen Anna...</h2>
+            <p>Put on your headphones. This is something very special, just for you.</p>
+            <p class="audio-subtext">ನಿನಗಾಗಿ ಏನೋ ಸ್ಪೆಷಲ್ ಇದೆ... ❤️</p>
+            <button id="start-experience" class="glow-button">
+                <span>Begin the Journey</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════════ SECTION 1: CINEMATIC INTRO ═══════════ -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-bg-video">
+            <div class="cinematic-overlay"></div>
+        </div>
+        <!-- Hero background photo with 3 photos covering full screen -->
+        <div class="hero-photo-bg">
+            <div class="hero-bg-slides">
+                <div class="hero-bg-slide active" style="background-image: url('images/classroom_board.jpg');"></div>
+                <div class="hero-bg-slide" style="background-image: url('images/graduation1.jpg');"></div>
+                <div class="hero-bg-slide" style="background-image: url('images/college_together.jpg');"></div>
+            </div>
+            <div class="hero-photo-overlay"></div>
+        </div>
+
+        <!-- LEFT: Praveen's single photo -->
+        <div class="hero-portrait hero-portrait-left animate-on-scroll">
+            <div class="portrait-frame">
+                <img src="images/praveen_single.jpg" alt="Praveen">
+                <div class="portrait-glow"></div>
+            </div>
+            <p class="portrait-name">Praveen ❤️</p>
+            <p class="portrait-label">ನನ್ನ Anna</p>
+        </div>
+
+        <!-- RIGHT: Sindhu's single photo -->
+        <div class="hero-portrait hero-portrait-right animate-on-scroll">
+            <div class="portrait-frame">
+                <img src="images/sindhu_single.jpg" alt="Sindhu">
+                <div class="portrait-glow"></div>
+            </div>
+            <p class="portrait-name">Sindhu ❤️</p>
+            <p class="portrait-label">Your Akka</p>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">✦ A Letter From The Heart ✦</div>
+            <h1 class="hero-title animate-on-scroll">
+                <span class="line1">Dear</span>
+                <span class="name-highlight" id="typewriter-name"></span>
+                <span class="line3">Anna</span>
+            </h1>
+            <div class="hero-divider animate-on-scroll">
+                <span class="divider-line"></span>
+                <span class="divider-heart">♥</span>
+                <span class="divider-line"></span>
+            </div>
+            <p class="hero-subtitle animate-on-scroll" id="typewriter-subtitle"></p>
+            <div class="scroll-indicator animate-on-scroll">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <p>Scroll Down Slowly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 2: OUR PHOTO STORY ═══════════ -->
+    <section id="photo-story" class="section photo-story-section">
+        <div class="section-overlay gradient-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">📸 ನಮ್ಮ ಕಥೆ — Our Story</h2>
+                <p class="section-desc">Every photo holds a memory that words can never capture</p>
+                <p class="section-desc-kannada">ಪ್ರತಿಯೊಂದು ಫೋಟೋದಲ್ಲೂ ನಮ್ಮ ಪ್ರೀತಿ ಅಡಗಿದೆ ✨</p>
+            </div>
+
+            <!-- CINEMATIC PHOTO TIMELINE -->
+            <div class="photo-timeline">
+                <!-- Photo 1: Birthday Feeding -->
+                <div class="photo-moment animate-on-scroll" data-delay="0">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame golden-frame">
+                            <img src="images/birthday_feed.jpg" alt="Sindhu feeding cake to Praveen">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">🎂 Birthday Memory</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ಆ Birthday ನೆನಪಿದೆಯಾ? 🎂</h3>
+                        <p class="moment-desc">Anna, ಈ ದಿನ ನಿನಗೆ cake ತಿನ್ನಿಸಿದಾಗ ನನಗೆ ಎಷ್ಟು ಸಂತೋಷ ಆಗಿತ್ತು ಗೊತ್ತಾ? ನೀನು
+                            ನಗ್ತಿದ್ದ ಆ ನಗು ನನ್ನ ಜೀವನದ ಅತ್ಯಂತ ಸುಂದರ ಕ್ಷಣ! 👑</p>
+                        <span class="moment-english">That day when I fed you cake... your smile was the most beautiful
+                            moment of my life!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 2: Birthday Pose -->
+                <div class="photo-moment reverse animate-on-scroll" data-delay="200">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame rose-frame">
+                            <img src="images/birthday_pose.jpg" alt="Sindhu and Praveen birthday pose">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">👑 King & Queen</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನನ್ನ Anna, ನನ್ನ Hero! 👑</h3>
+                        <p class="moment-desc">ನೋಡು ಎಷ್ಟು cute ಆಗಿ ಇದ್ದೀಯ! ನಿನ್ನ ಜೊತೆ ಈ ಕ್ಷಣಗಳನ್ನ share ಮಾಡೋದೇ ನನ್ನ
+                            ಪುಣ್ಯ. ನೀನು ನನ್ನ world, Anna ❤️</p>
+                        <span class="moment-english">Look how cute you are! Sharing these moments with you is my
+                            blessing. You are my world, Anna!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 3: College Together -->
+                <div class="photo-moment animate-on-scroll" data-delay="400">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame golden-frame">
+                            <img src="images/college_together.jpg" alt="Sindhu and Praveen at college">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">📚 College Days</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನಮ್ಮ College ನೆನಪುಗಳು 📚</h3>
+                        <p class="moment-desc">ಒಟ್ಟಿಗೆ college ಗೆ ಹೋಗಿದ್ದು, ಒಟ್ಟಿಗೆ ಓದಿದ್ದು, ಒಟ್ಟಿಗೆ ನಕ್ಕಿದ್ದು... ಈ
+                            ದಿನಗಳು ಎಂದಿಗೂ ಮರೆಯಲಾಗದು Anna!</p>
+                        <span class="moment-english">Going to college together, studying together, laughing together...
+                            these days can never be forgotten!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 4: Classroom Standing -->
+                <div class="photo-moment reverse animate-on-scroll" data-delay="600">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame rose-frame">
+                            <img src="images/classroom_standing.jpg" alt="Together in classroom">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">🏫 Classroom Bond</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನಮ್ಮ Classroom ❤️</h3>
+                        <p class="moment-desc">ಈ blackboard ಮುಂದೆ ನಿಂತಿದ್ದೆವಲ್ಲ, ಆಗ ನಮ್ಮಿಬ್ಬರ ನಡುವೆ ಎಷ್ಟು ಖುಷಿ ಇತ್ತು!
+                            ನೀನು ನನ್ನ ಜೊತೆ ಇದ್ದ ಪ್ರತಿ ಕ್ಷಣ ಅಮೂಲ್ಯ Anna 🏫</p>
+                        <span class="moment-english">Standing in front of this blackboard... every moment with you was
+                            precious!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 5: Special Occasion - Saree -->
+                <div class="photo-moment animate-on-scroll" data-delay="200">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame golden-frame special-frame">
+                            <img src="images/special_occasion.jpg" alt="Special occasion together">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">✨ Special Day</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನಮ್ಮ ಸ್ಪೆಷಲ್ ದಿನ ✨</h3>
+                        <p class="moment-desc">ಈ ದಿನ ಎಷ್ಟು ಸ್ಪೆಷಲ್ ಆಗಿತ್ತು ಗೊತ್ತಾ? ನೀನು jacket ಹಾಕಿ ಎಷ್ಟು handsome ಆಗಿ
+                            ಕಾಣ್ತಿದ್ದೆ! ನಿನ್ನ ಜೊತೆ ಎಲ್ಲ function ಗೆ ಹೋಗೋದು ನನಗೆ ತುಂಬಾ ಇಷ್ಟ ❤️</p>
+                        <span class="moment-english">How special this day was! You looked so handsome in your jacket. I
+                            love going everywhere with you!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 6: Graduation 1 -->
+                <div class="photo-moment reverse animate-on-scroll" data-delay="400">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame rose-frame graduation-frame">
+                            <img src="images/graduation1.jpg" alt="Graduation together">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">🎓 Proud Moment</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನಮ್ಮ Graduation Day! 🎓</h3>
+                        <p class="moment-desc">Anna, ಈ cap & gown ಹಾಕಿ ನಿಂತಾಗ ನನ್ನ ಕಣ್ಣಲ್ಲಿ ನೀರು ಬಂತು... ಹೆಮ್ಮೆಯ
+                            ಕಣ್ಣೀರು! ನಾವಿಬ್ಬರೂ ಒಟ್ಟಿಗೆ graduate ಆದ್ವಿ ಅನ್ನೋ ಖುಷಿ ❤️🎓</p>
+                        <span class="moment-english">When we wore the cap & gown, I had tears of pride! We graduated
+                            together and that joy is forever!</span>
+                    </div>
+                </div>
+
+                <!-- Photo 7: Graduation 2 -->
+                <div class="photo-moment animate-on-scroll" data-delay="600">
+                    <div class="moment-image-wrapper">
+                        <div class="image-frame golden-frame graduation-frame">
+                            <img src="images/graduation2.jpg" alt="Graduation day 2">
+                            <div class="image-shine"></div>
+                        </div>
+                        <div class="moment-tag">🎓 Proud Akka!</div>
+                    </div>
+                    <div class="moment-text">
+                        <h3 class="moment-title">ನನ್ನ ಹೆಮ್ಮೆ, ನನ್ನ Anna! 🎓❤️</h3>
+                        <p class="moment-desc">ನಿನ್ನ ಅಕ್ಕ ಆಗಿರೋದು ನನ್ನ ಜೀವನದ ಅತ್ಯಂತ ದೊಡ್ಡ ಹೆಮ್ಮೆ. ನೋಡು, ನಾವಿಬ್ಬರೂ ಎಷ್ಟು
+                            far ಬಂದಿದ್ದೀವಿ! I'm so proud of you, Praveen! 💪🎓</p>
+                        <span class="moment-english">Being your Akka is my greatest pride. Look how far we've come! I'm
+                            so proud of you!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ ANIMATED COUNTERS ═══════════ -->
+    <section id="counters" class="section counters-section">
+        <div class="section-overlay gradient-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">💫 ನಮ್ಮ ಪ್ರೀತಿಯ ಲೆಕ್ಕ</h2>
+                <p class="section-desc">Our Love in Numbers</p>
+            </div>
+            <div class="counters-grid">
+                <div class="counter-card glass-card animate-on-scroll" data-delay="0">
+                    <div class="counter-icon">📅</div>
+                    <div class="counter-number" data-target="365" data-suffix="+">0</div>
+                    <div class="counter-label">ದಿನಗಳ ನೆನಪು</div>
+                    <div class="counter-sublabel">365+ Days of Memories</div>
+                </div>
+                <div class="counter-card glass-card animate-on-scroll" data-delay="200">
+                    <div class="counter-icon">😂</div>
+                    <div class="counter-number" data-target="1000" data-suffix="+">0</div>
+                    <div class="counter-label">ನಗುವಿನ ಕ್ಷಣಗಳು</div>
+                    <div class="counter-sublabel">1000+ Laughs Together</div>
+                </div>
+                <div class="counter-card glass-card animate-on-scroll" data-delay="400">
+                    <div class="counter-icon">📸</div>
+                    <div class="counter-number" data-target="500" data-suffix="+">0</div>
+                    <div class="counter-label">ಫೋಟೋ ನೆನಪುಗಳು</div>
+                    <div class="counter-sublabel">500+ Precious Photos</div>
+                </div>
+                <div class="counter-card glass-card animate-on-scroll" data-delay="600">
+                    <div class="counter-icon">❤️</div>
+                    <div class="counter-number counter-infinity" data-target="infinity">∞</div>
+                    <div class="counter-label">ಪ್ರೀತಿ ನಿನಗಾಗಿ</div>
+                    <div class="counter-sublabel">∞ Love From Your Akka</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 3: EMOTIONAL MESSAGE ═══════════ -->
+    <section id="message" class="section message-section">
+        <div class="section-bg" style="background-image: url('images/childhood_path.jpg')"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="message-card glass-card animate-on-scroll">
+                <div class="quote-mark">"</div>
+                <h2 class="section-title kannada-title">ನನ್ನ ಪ್ರೀತಿಯ ಅಣ್ಣ...</h2>
+                <div class="typewriter-container">
+                    <p class="emotional-text" id="typewriter-message"></p>
+                </div>
+                <div class="signature">
+                    <span class="signature-text">— ನಿನ್ನ ಅಕ್ಕ, Sindhu ❤️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION: SINDHU'S ACTUAL HANDWRITTEN LETTERS ═══════════ -->
+    <section id="handwritten-letters" class="section handwritten-section">
+        <div class="section-overlay dark-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="pen-badge">✒️ Straight From My Pen & Heart</div>
+                <h2 class="section-title glow-text">💌 ನನ್ನ ಕೈಬರಹದ ಪತ್ರಗಳು — My Handwritten Letters</h2>
+                <p class="section-desc">Words written by my own hand, straight from my diary to your heart</p>
+                <p class="section-desc-kannada">ನನ್ನ ಕೈಯಾರೆ ಬರೆದ ಪ್ರೀತಿಯ ಸಾಲುಗಳು, ನಿನಗಾಗಿ ಮಾತ್ರ Anna ❤️</p>
+            </div>
+
+            <!-- LETTER NAVIGATION TABS -->
+            <div class="letter-tabs animate-on-scroll">
+                <button class="letter-tab active" data-letter="letter1" onclick="switchLetterTab('letter1', this)">
+                    <span class="tab-emoji">💛</span>
+                    <span class="tab-title">My Favourite Brother</span>
+                    <span class="tab-sub">One year & still handling me</span>
+                </button>
+                <button class="letter-tab" data-letter="letter2" onclick="switchLetterTab('letter2', this)">
+                    <span class="tab-emoji">🌿</span>
+                    <span class="tab-title">Strangers to Brothers</span>
+                    <span class="tab-sub">Non-blood brother forever</span>
+                </button>
+                <button class="letter-tab" data-letter="letter3" onclick="switchLetterTab('letter3', this)">
+                    <span class="tab-emoji">🙏</span>
+                    <span class="tab-title">Thank You For Everything</span>
+                    <span class="tab-sub">Laughter, silly talks & being there</span>
+                </button>
+                <button class="letter-tab" data-letter="letter4" onclick="switchLetterTab('letter4', this)">
+                    <span class="tab-emoji">📜</span>
+                    <span class="tab-title">10 Golden Bond Rules</span>
+                    <span class="tab-sub">No escape, lifetime subscription!</span>
+                </button>
+            </div>
+
+            <!-- LETTER DISPLAY SHOWCASE -->
+            <div class="letter-showcase animate-on-scroll">
+                <!-- Letter Panel 1: Favourite Brother -->
+                <div class="letter-panel active" id="panel-letter1">
+                    <div class="letter-card-split">
+                        <div class="letter-photo-side">
+                            <div class="polaroid-wrapper" onclick="openLetterModal('images/handwritten_favourite_bro.jpg', 'Letter 1: My Favourite Brother')">
+                                <img src="images/handwritten_favourite_bro.jpg" alt="Handwritten Letter - My Favourite Brother" class="letter-photo-img">
+                                <div class="zoom-badge">🔍 Click to zoom original handwritten page</div>
+                            </div>
+                        </div>
+                        <div class="letter-text-side">
+                            <div class="handwriting-header">
+                                <span class="quill-icon">✒️</span>
+                                <span class="ink-date">Page 1 • Written with all my heart</span>
+                            </div>
+                            <div class="handwritten-transcript">
+                                <h3 class="letter-heading cursive-font">My Favourite Brother ❤️</h3>
+                                <p class="letter-salutation cursive-font">Dear Pravu,</p>
+                                <p class="letter-body cursive-font">It's been one year... and Wow, you're still handling me 🙃</p>
+                                <p class="letter-body cursive-font">I Think that's the biggest achievement of your Life so far</p>
+                                <p class="letter-body cursive-font">But Seriously, this Journey With you has been really Special and <span class="quote-gold">"I Love you the Most Brother"</span> ❤️</p>
+                            </div>
+                            <div class="kannada-translation-box">
+                                <span class="trans-tag">ಕನ್ನಡ ಅನುವಾದ</span>
+                                <p>ನನ್ನ ಪ್ರೀತಿಯ ಪ್ರವು... ಒಂದು ವರ್ಷ ಆಯ್ತು, ನೀನು ಇನ್ನು ನನ್ನನ್ನ ತಡ್ಕೊಂತಿದ್ದೀಯ ಅಂದ್ರೆ ಅದು ನಿನ್ನ ಜೀವನದ ಅತಿ ದೊಡ್ಡ ಸಾಧನೆ! 🙃 ಈ ಜರ್ನಿ ತುಂಬಾ ಸ್ಪೆಷಲ್, ಐ ಲವ್ ಯು ಸೋ ಮಚ್ ಅಣ್ಣಾ! ❤️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter Panel 2: Strangers to Brothers -->
+                <div class="letter-panel" id="panel-letter2">
+                    <div class="letter-card-split">
+                        <div class="letter-photo-side">
+                            <div class="polaroid-wrapper" onclick="openLetterModal('images/handwritten_dear_bro.jpg', 'Letter 2: Strangers to Strong Bond')">
+                                <img src="images/handwritten_dear_bro.jpg" alt="Handwritten Letter - Strangers to Brother" class="letter-photo-img">
+                                <div class="zoom-badge">🔍 Click to zoom original handwritten page</div>
+                            </div>
+                        </div>
+                        <div class="letter-text-side">
+                            <div class="handwriting-header">
+                                <span class="quill-icon">✒️</span>
+                                <span class="ink-date">Page 2 • Our Journey</span>
+                            </div>
+                            <div class="handwritten-transcript">
+                                <h3 class="letter-heading cursive-font">Unexpected Bond 💫</h3>
+                                <p class="letter-salutation cursive-font">Dear Bro,</p>
+                                <p class="letter-body cursive-font">Really I don't know how this bond forms unexpectedly...</p>
+                                <p class="letter-body cursive-font">Honestly, I Still don't understand how we went From Strangers to this Strong bond... but I'm really Glad it happened.</p>
+                                <p class="letter-body cursive-font">Life became a little more Fun, a little more Crazy, and a Lot more Special after you came into it.</p>
+                                <p class="letter-body cursive-font highlight-quote">You are Not My brother by blood, but don't worry — you are officially Stuck with me now as My Non-blood brother Forever....</p>
+                            </div>
+                            <div class="kannada-translation-box">
+                                <span class="trans-tag">ಕನ್ನಡ ಅನುವಾದ</span>
+                                <p>ಅಪರಿಚಿತರಾಗಿದ್ದ ನಾವು ಇಂದು ಇಷ್ಟೊಂದು ಗಟ್ಟಿಯಾದ ಅಣ್ಣ-ತಂಗಿ ಆಗಿದ್ದು ನಿಜಕ್ಕೂ ಪವಾಡ. ನೀನು ಬಂದ ಮೇಲೆ ಜೀವನ ಮತ್ತಷ್ಟು ಮಜಾ, ಮತ್ತಷ್ಟು ಕ್ರೇಜಿ ಮತ್ತು ಸ್ಪೆಷಲ್ ಆಯ್ತು. ರಕ್ತ ಸಂಬಂಧ ಅಲ್ಲದಿರಬಹುದು, ಆದ್ರೆ ನೀನು ನನ್ನ ಶಾಶ್ವತ ಅಣ್ಣ! 🤝❤️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter Panel 3: Thank You For Everything -->
+                <div class="letter-panel" id="panel-letter3">
+                    <div class="letter-card-split">
+                        <div class="letter-photo-side">
+                            <div class="polaroid-wrapper" onclick="openLetterModal('images/handwritten_thank_you.jpg', 'Letter 3: Gratitude & Love')">
+                                <img src="images/handwritten_thank_you.jpg" alt="Handwritten Letter - Thank You" class="letter-photo-img">
+                                <div class="zoom-badge">🔍 Click to zoom original handwritten page</div>
+                            </div>
+                        </div>
+                        <div class="letter-text-side">
+                            <div class="handwriting-header">
+                                <span class="quill-icon">✒️</span>
+                                <span class="ink-date">Page 3 • Deep Gratitude</span>
+                            </div>
+                            <div class="handwritten-transcript">
+                                <h3 class="letter-heading cursive-font">Heartfelt Thanks 💖</h3>
+                                <p class="letter-body cursive-font">Thank you for all the Laughter, the Silly talks, and Even for Listening to my non-sense Sometimes.</p>
+                                <p class="letter-body cursive-font">And also.... thank you for being there for me When I needed Someone the most. That really means a lot.</p>
+                                <p class="letter-body cursive-font">I May not Say it often, but I truly care about you and I want to See you happy always. <span class="quote-gold">Your Happiness Matters to me more than you know.</span></p>
+                                <p class="letter-body cursive-font highlight-quote">So today, on this Special day, I Just want to Say — Keep Smiling, Keep being annoying, and Keep being amazing Person you are...</p>
+                            </div>
+                            <div class="kannada-translation-box">
+                                <span class="trans-tag">ಕನ್ನಡ ಅನುವಾದ</span>
+                                <p>ನನ್ನ ಎಲ್ಲಾ ಹರಟೆಗಳನ್ನು ಕೇಳಿದ್ದಕ್ಕೆ, ನನಗೆ ಯಾರೂ ಇಲ್ಲದಾಗ ನನ್ನ ಜೊತೆ ನಿಂತಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು ಅಣ್ಣಾ. ನಿನ್ನ ಖುಷಿ ನನಗೆ ಎಲ್ಲಕ್ಕಿಂತ ಮುಖ್ಯ. ಯಾವಾಗಲೂ ನಗ್ತಾ ಇರು, ಸದಾ ಹೀಗೆಯೇ ಇರು! ✨❤️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter Panel 4: 10 Golden Bond Rules -->
+                <div class="letter-panel" id="panel-letter4">
+                    <div class="rules-showcase">
+                        <div class="rules-header-intro">
+                            <h3 class="rules-main-title">📜 The 10 Official Bond Rules — No Cancellation!</h3>
+                            <p class="rules-main-sub">Written in ink by Sindhu • Legally binding for a lifetime 😉</p>
+                        </div>
+                        <div class="rules-photos-row">
+                            <div class="polaroid-wrapper" onclick="openLetterModal('images/handwritten_rules1.jpg', 'The 10 Rules: Part 1 (Rules 1 to 4)')">
+                                <img src="images/handwritten_rules1.jpg" alt="Handwritten Rules 1" class="letter-photo-img">
+                                <div class="zoom-badge">🔍 Zoom Rules 1 to 4</div>
+                            </div>
+                            <div class="polaroid-wrapper" onclick="openLetterModal('images/handwritten_rules2.jpg', 'The 10 Rules: Part 2 (Rules 5 to 10)')">
+                                <img src="images/handwritten_rules2.jpg" alt="Handwritten Rules 2" class="letter-photo-img">
+                                <div class="zoom-badge">🔍 Zoom Rules 5 to 10</div>
+                            </div>
+                        </div>
+                        <div class="rules-interactive-grid">
+                            <div class="rule-chip"><span class="rule-num">1</span> <p>"You cannot Escape this bond. Lifetime Subscription activated." 🔒</p></div>
+                            <div class="rule-chip"><span class="rule-num">2</span> <p>"You are My brother Forever. No Cancellation Allowed." 🚫</p></div>
+                            <div class="rule-chip"><span class="rule-num">3</span> <p>"No Matter What You do... You cannot resign from this bond." 📜</p></div>
+                            <div class="rule-chip"><span class="rule-num">4</span> <p>"Ignoring your Sister is not allowed.... Punishment will be applied." ⚡</p></div>
+                            <div class="rule-chip"><span class="rule-num">5</span> <p>"You didn't choose this bond... but now you have no choice." 😉</p></div>
+                            <div class="rule-chip"><span class="rule-num">6</span> <p>"Our bond is like WiFi... Sometimes Slow, but always connected." 📶</p></div>
+                            <div class="rule-chip"><span class="rule-num">7</span> <p>"You are Permanently Saved in my life... no delete Option." 💾</p></div>
+                            <div class="rule-chip"><span class="rule-num">8</span> <p>"Even if you try to escape... I will Find You." 🕵️‍♀️</p></div>
+                            <div class="rule-chip"><span class="rule-num">9</span> <p>"Congratulations! You unlocked 'Best Brother Ever' title Forever." 🏆</p></div>
+                            <div class="rule-chip"><span class="rule-num">10</span> <p>"No Uninstall option available for this relationship." 🛡️</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIGHTBOX MODAL FOR FULLSCREEN LETTER VIEW -->
+            <div id="letter-modal" class="letter-modal" onclick="closeLetterModal()">
+                <div class="letter-modal-content" onclick="event.stopPropagation()">
+                    <button class="letter-modal-close" onclick="closeLetterModal()">&times;</button>
+                    <img id="letter-modal-img" src="" alt="Handwritten letter zoom">
+                    <p id="letter-modal-caption" class="letter-modal-caption"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 4: VOICE MESSAGES ═══════════ -->
+    <section id="voice" class="section voice-section">
+        <div class="section-bg" style="background-image: url('images/lantern_sky.jpg')"></div>
+        <div class="section-overlay dark-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">🎙️ ನನ್ನ ದನಿ ಕೇಳು, Anna</h2>
+                <p class="section-desc">Close your eyes... and just listen to your Akka's voice</p>
+                <p class="section-desc-kannada">ಕಣ್ಮುಚ್ಚಿ ಕೇಳು... ನಾನು ನಿನ್ನ ಹತ್ತಿರದಲ್ಲೇ ಇದ್ದೀನಿ ❤️</p>
+            </div>
+            <div class="voice-grid">
+                <div class="voice-card glass-card animate-on-scroll" data-delay="0">
+                    <div class="voice-avatar">
+                        <img src="images/birthday_feed.jpg" alt="Sindhu">
+                    </div>
+                    <div class="voice-visual">
+                        <div class="sound-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h3 class="voice-label">💌 Voice Message 1</h3>
+                    <p class="voice-desc">ನಿನಗಾಗಿ ನನ್ನ ಮೊದಲ ಮಾತು...</p>
+                    <audio id="voice1" src="myvoice.mp4" preload="auto"></audio>
+                    <button class="play-btn" onclick="toggleVoice('voice1', this)">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon">⏸</span>
+                        <span class="btn-text">Play My Voice</span>
+                    </button>
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" id="progress-voice1"></div>
+                    </div>
+                </div>
+                <div class="voice-card glass-card animate-on-scroll" data-delay="200">
+                    <div class="voice-avatar">
+                        <img src="images/college_together.jpg" alt="Together">
+                    </div>
+                    <div class="voice-visual">
+                        <div class="sound-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h3 class="voice-label">💌 Voice Message 2</h3>
+                    <p class="voice-desc">ಇನ್ನೊಂದು ಮಾತು ಕೇಳು Anna...</p>
+                    <audio id="voice2" src="myvoice2.mp4" preload="auto"></audio>
+                    <button class="play-btn" onclick="toggleVoice('voice2', this)">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon">⏸</span>
+                        <span class="btn-text">Play My Voice</span>
+                    </button>
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" id="progress-voice2"></div>
+                    </div>
+                </div>
+                <div class="voice-card glass-card animate-on-scroll" data-delay="400">
+                    <div class="voice-avatar">
+                        <img src="images/graduation1.jpg" alt="Graduation">
+                    </div>
+                    <div class="voice-visual">
+                        <div class="sound-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h3 class="voice-label">💌 Voice Message 3</h3>
+                    <p class="voice-desc">ಮತ್ತೆ ಕೇಳು... ❤️</p>
+                    <audio id="voice3" src="myvoice3.mp4" preload="auto"></audio>
+                    <button class="play-btn" onclick="toggleVoice('voice3', this)">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon">⏸</span>
+                        <span class="btn-text">Play My Voice</span>
+                    </button>
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" id="progress-voice3"></div>
+                    </div>
+                </div>
+                <div class="voice-card glass-card animate-on-scroll" data-delay="600">
+                    <div class="voice-avatar">
+                        <img src="images/special_occasion.jpg" alt="Special">
+                    </div>
+                    <div class="voice-visual">
+                        <div class="sound-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h3 class="voice-label">💌 Voice Message 4</h3>
+                    <p class="voice-desc">ಕೊನೆಯ ಮಾತು... ❤️‍🔥</p>
+                    <audio id="voice4" src="myvoice4.mp4" preload="auto"></audio>
+                    <button class="play-btn" onclick="toggleVoice('voice4', this)">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon">⏸</span>
+                        <span class="btn-text">Play My Voice</span>
+                    </button>
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" id="progress-voice4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 5: 3D ROTATING GALLERY ═══════════ -->
+    <section id="memories" class="section memories-section">
+        <div class="section-bg" style="background-image: url('images/memories_bg_subtle.jpg')"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">💫 3D Memory Gallery</h2>
+                <p class="section-desc">Watch our memories spin around you</p>
+                <p class="section-desc-kannada">ನಮ್ಮ ನೆನಪುಗಳು ಸುತ್ತುತ್ತಿವೆ... ❤️</p>
+            </div>
+
+            <!-- 3D ROTATING GALLERY with YOUR REAL PHOTOS -->
+            <div class="gallery-3d-container animate-on-scroll">
+                <div class="gallery-3d" id="gallery3d">
+                    <div class="gallery-item">
+                        <img src="images/birthday_feed.jpg" alt="Birthday">
+                        <div class="gallery-item-overlay">
+                            <p>Birthday Love 🎂❤️</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/birthday_pose.jpg" alt="Pose">
+                        <div class="gallery-item-overlay">
+                            <p>My Hero Anna! 👑</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/college_together.jpg" alt="College">
+                        <div class="gallery-item-overlay">
+                            <p>College Memories 📚</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/special_occasion.jpg" alt="Special">
+                        <div class="gallery-item-overlay">
+                            <p>Special Together ✨</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/graduation1.jpg" alt="Graduation">
+                        <div class="gallery-item-overlay">
+                            <p>Proud Moment! 🎓</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/graduation2.jpg" alt="Graduation 2">
+                        <div class="gallery-item-overlay">
+                            <p>We Did It! 🎓💪</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDESHOW with YOUR REAL PHOTOS -->
+            <div class="slideshow-container animate-on-scroll">
+                <h3 class="slideshow-title">✨ ನಮ್ಮ ಅಮೂಲ್ಯ ಕ್ಷಣಗಳು ✨</h3>
+                <div class="slideshow" id="slideshow">
+                    <div class="slide active">
+                        <img src="images/birthday_feed.jpg" alt="Birthday">
+                        <div class="slide-caption">
+                            <p>"ನಿನಗೆ cake ತಿನ್ನಿಸಿದ ಆ ಕ್ಷಣ... ❤️"</p>
+                            <span>— The moment I fed you cake on your birthday...</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/birthday_pose.jpg" alt="Birthday Pose">
+                        <div class="slide-caption">
+                            <p>"ನನ್ನ Anna ಎಷ್ಟು cute ಇದ್ದಾನೆ! 👑"</p>
+                            <span>— My Anna is the cutest!</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/college_together.jpg" alt="College">
+                        <div class="slide-caption">
+                            <p>"College ಅಲ್ಲಿ ಒಟ್ಟಿಗೆ ಕಳೆದ ದಿನಗಳು... 📚"</p>
+                            <span>— The days we spent together in college...</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/classroom_standing.jpg" alt="Classroom">
+                        <div class="slide-caption">
+                            <p>"ನಮ್ಮ classroom ನೆನಪುಗಳು... 🏫"</p>
+                            <span>— Our classroom memories will live forever...</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/special_occasion.jpg" alt="Special">
+                        <div class="slide-caption">
+                            <p>"ಸ್ಪೆಷಲ್ ದಿನಗಳು, ಸ್ಪೆಷಲ್ ನೆನಪುಗಳು ✨"</p>
+                            <span>— Special days, special memories...</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/graduation1.jpg" alt="Graduation">
+                        <div class="slide-caption">
+                            <p>"ನಾವಿಬ್ಬರೂ graduate ಆದ ಹೆಮ್ಮೆಯ ದಿನ! 🎓"</p>
+                            <span>— The proud day we both graduated!</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/graduation2.jpg" alt="Graduation 2">
+                        <div class="slide-caption">
+                            <p>"ನಿನ್ನ ಅಕ್ಕ ಅನ್ನೋ ಹೆಮ್ಮೆ... 🎓❤️"</p>
+                            <span>— The pride of being your Akka...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideshow-controls">
+                    <button class="slide-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+                    <div class="slide-dots" id="slide-dots"></div>
+                    <button class="slide-btn next-btn" onclick="changeSlide(1)">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 6: VIDEO MEMORIES ═══════════ -->
+    <section id="videos" class="section videos-section">
+        <div class="section-overlay gradient-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">🎬 ನಮ್ಮ ವಿಡಿಯೋ ನೆನಪುಗಳು</h2>
+                <p class="section-desc">Our Video Memories — Press play and relive our moments</p>
+                <p class="section-desc-kannada">ಈ ಕ್ಷಣಗಳನ್ನು ಮತ್ತೆ ನೋಡು... ❤️</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card glass-card animate-on-scroll" data-delay="0">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" poster="images/classroom_standing.jpg">
+                            <source src="WhatsApp Video 2026-10-02 at 5.31.27 PM.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>📹 ನೆನಪು 1</h3>
+                        <p>ನಮ್ಮ ಮತ್ತೊಂದು ನೆನಪು 💫</p>
+                    </div>
+                </div>
+                <div class="video-card glass-card animate-on-scroll" data-delay="200">
+                    <div class="video-wrapper special-video">
+                        <video controls preload="metadata" poster="images/special_occasion.jpg">
+                            <source src="WhatsApp Video 2026-10-02 at 5.31.28 PM.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>📹 ನೆನಪು 2</h3>
+                        <p>ಇನ್ನೊಂದು ಸ್ಪೆಷಲ್ ಮೆಮೊರಿ 🌟</p>
+                    </div>
+                </div>
+                <div class="video-card glass-card animate-on-scroll" data-delay="400">
+                    <div class="video-wrapper special-video">
+                        <video controls preload="metadata" poster="images/graduation1.jpg">
+                            <source src="Snapchat-1445021947.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>📹 Special Memory ⭐</h3>
+                        <p>ನಮ್ಮ ಅತ್ಯಂತ ಸ್ಪೆಷಲ್ ಮೆಮೊರಿ! ❤️‍🔥</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 7: REASONS I LOVE YOU ═══════════ -->
+    <section id="reasons" class="section reasons-section">
+        <div class="section-bg" style="background-image: url('images/heart_tree.jpg')"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title glow-text">💝 ನಾನು ನಿನ್ನನ್ನು ಯಾಕೆ ಇಷ್ಟ ಮಾಡ್ತೀನಿ</h2>
+                <p class="section-desc">Reasons I Love You, Anna</p>
+            </div>
+            <div class="reasons-timeline">
+                <div class="timeline-line"></div>
+                <div class="reason-item animate-on-scroll" data-delay="0">
+                    <div class="reason-dot"></div>
+                    <div class="reason-card glass-card">
+                        <div class="reason-photo"><img src="images/birthday_feed.jpg" alt=""></div>
+                        <span class="reason-emoji">🛡️</span>
+                        <h3>ನನ್ನ ರಕ್ಷಕ</h3>
+                        <p>ನೀನು ಯಾವಾಗಲೂ ನನ್ನ ಜೊತೆ ನಿಂತಿದ್ದೀಯ. ನನಗೆ ಏನೇ ಕಷ್ಟ ಬಂದ್ರೂ ನೀನು ಗೋಡೆಯ ಹಾಗೆ ನಿಂತೀಯ Anna.</p>
+                        <span class="reason-translate">You always stood by me. No matter what trouble came, you stood
+                            like a wall for me.</span>
+                    </div>
+                </div>
+                <div class="reason-item right animate-on-scroll" data-delay="200">
+                    <div class="reason-dot"></div>
+                    <div class="reason-card glass-card">
+                        <div class="reason-photo"><img src="images/birthday_pose.jpg" alt=""></div>
+                        <span class="reason-emoji">😂</span>
+                        <h3>ನನ್ನ ನಗು</h3>
+                        <p>ನಿನ್ನ ಜೊತೆ ಇದ್ರೆ ನನಗೆ ಅಳಲು ಆಗಲ್ಲ... ಯಾಕಂದ್ರೆ ನೀನು ಎಷ್ಟು ಮಜಾ ಮಾಡ್ತೀಯ ಅಂದ್ರೆ ನನಗೆ ಯಾವಾಗಲೂ ನಗು
+                            ಬರುತ್ತೆ!</p>
+                        <span class="reason-translate">When I'm with you, I can't cry... because you make everything so
+                            fun!</span>
+                    </div>
+                </div>
+                <div class="reason-item animate-on-scroll" data-delay="400">
+                    <div class="reason-dot"></div>
+                    <div class="reason-card glass-card">
+                        <div class="reason-photo"><img src="images/college_together.jpg" alt=""></div>
+                        <span class="reason-emoji">🤝</span>
+                        <h3>ನನ್ನ ಬೆಸ್ಟ್ ಫ್ರೆಂಡ್</h3>
+                        <p>ಅಣ್ಣ ಮಾತ್ರ ಅಲ್ಲ, ನೀನು ನನ್ನ ಬೆಸ್ಟ್ ಫ್ರೆಂಡ್ ಕೂಡ. ನನ್ನ ಎಲ್ಲಾ ಸೀಕ್ರೆಟ್ಸ್ ನಿನ್ನ ಹತ್ರಾನೆ ಹೇಳ್ತೀನಿ!
+                        </p>
+                        <span class="reason-translate">Not just my brother, you're my best friend too. I tell all my
+                            secrets only to you!</span>
+                    </div>
+                </div>
+                <div class="reason-item right animate-on-scroll" data-delay="600">
+                    <div class="reason-dot"></div>
+                    <div class="reason-card glass-card">
+                        <div class="reason-photo"><img src="images/special_occasion.jpg" alt=""></div>
+                        <span class="reason-emoji">💪</span>
+                        <h3>ನನ್ನ ಧೈರ್ಯ</h3>
+                        <p>ನೀನು ಇರೋದ್ರಿಂದ ನನಗೆ ಯಾವುದಕ್ಕೂ ಭಯ ಇಲ್ಲ. ನಿನ್ನ ಅಕ್ಕ ಅನ್ನೋ ಹೆಮ್ಮೆ ನನಗೆ ಯಾವಾಗಲೂ ಧೈರ್ಯ ಕೊಡುತ್ತೆ.
+                        </p>
+                        <span class="reason-translate">Because you exist, I fear nothing. The pride of being your Akka
+                            gives me courage.</span>
+                    </div>
+                </div>
+                <div class="reason-item animate-on-scroll" data-delay="800">
+                    <div class="reason-dot"></div>
+                    <div class="reason-card glass-card">
+                        <div class="reason-photo"><img src="images/graduation1.jpg" alt=""></div>
+                        <span class="reason-emoji">❤️‍🔥</span>
+                        <h3>ನನ್ನ ಜೀವ</h3>
+                        <p>Praveen, ನೀನು ನನ್ನ ಜೀವ. ಈ ಪ್ರಪಂಚದಲ್ಲಿ ನನಗೆ ನಿನ್ನಷ್ಟು ಹತ್ತಿರವಾದವರು ಯಾರೂ ಇಲ್ಲ. I love you so
+                            much, Anna! ❤️</p>
+                        <span class="reason-translate">Praveen, you are my life. No one in this world is as close to me
+                            as you!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 8: PROMISE ═══════════ -->
+    <section id="promise" class="section promise-section">
+        <div class="section-bg" style="background-image: url('images/stars_infinity.jpg')"></div>
+        <div class="section-overlay dark-overlay"></div>
+        <div class="container">
+            <div class="promise-content animate-on-scroll">
+                <div class="infinity-symbol">∞</div>
+                <h2 class="promise-title">ನನ್ನ Promise, Anna</h2>
+                <div class="promise-text" id="typewriter-promise"></div>
+                <div class="promise-cards">
+                    <div class="promise-card glass-card animate-on-scroll" data-delay="0">
+                        <span class="promise-icon">🌟</span>
+                        <p>ನಿನ್ನ ಸಂತೋಷಕ್ಕಾಗಿ ಏನು ಬೇಕಾದ್ರೂ ಮಾಡ್ತೀನಿ</p>
+                        <span class="promise-eng">I'll do anything for your happiness</span>
+                    </div>
+                    <div class="promise-card glass-card animate-on-scroll" data-delay="200">
+                        <span class="promise-icon">🤗</span>
+                        <p>ಯಾವಾಗಲೂ ನಿನ್ನ ಜೊತೆ ಇರ್ತೀನಿ</p>
+                        <span class="promise-eng">I'll always be with you</span>
+                    </div>
+                    <div class="promise-card glass-card animate-on-scroll" data-delay="400">
+                        <span class="promise-icon">💖</span>
+                        <p>ನಿನ್ನನ್ನ ಎಂದಿಗೂ ಬಿಡಲ್ಲ</p>
+                        <span class="promise-eng">I'll never leave you</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SECTION 9: FINALE ═══════════ -->
+    <section id="finale" class="section finale-section">
+        <div class="section-bg" style="background-image: url('images/graduation2.jpg')"></div>
+        <div class="section-overlay warm-overlay"></div>
+        <div class="container">
+            <div class="finale-content">
+                <div class="floating-hearts" id="floating-hearts"></div>
+                <div class="finale-photo animate-on-scroll">
+                    <div class="finale-photo-frame">
+                        <img src="images/birthday_feed.jpg" alt="Sindhu & Praveen">
+                    </div>
+                </div>
+                <div class="finale-text animate-on-scroll">
+                    <h2 class="finale-title">
+                        <span class="finale-line" style="--delay: 0s">Praveen Anna,</span>
+                        <span class="finale-line" style="--delay: 0.5s">ನೀನು ಈ website ನೋಡ್ತಿದ್ದೀಯ ಅಂದ್ರೆ...</span>
+                        <span class="finale-line" style="--delay: 1s">ನನಗೆ ನಿನ್ನ ಬಗ್ಗೆ ಎಷ್ಟು ಪ್ರೀತಿ ಇದೆ ಅಂತ ತಿಳಿ.</span>
+                    </h2>
+                    <div class="finale-message animate-on-scroll">
+                        <p class="big-love">ನಾನು ನಿನ್ನನ್ನ</p>
+                        <p class="mega-love" id="love-counter">ತುಂಬಾ ತುಂಬಾ ತುಂಬಾ</p>
+                        <p class="big-love">ಪ್ರೀತಿಸ್ತೀನಿ! ❤️</p>
+                    </div>
+                    <div class="finale-badge animate-on-scroll">
+                        <p>I LOVE YOU, ANNA! 💕</p>
+                    </div>
+                    <div class="finale-sign animate-on-scroll">
+                        <p class="sign-from">Forever & Always,</p>
+                        <p class="sign-name">Your Akka Sindhu ❤️</p>
+                        <p class="sign-kannada">ನಿನ್ನ ಅಕ್ಕ ಸಿಂಧು ❤️</p>
+                    </div>
+                </div>
+
+                <button id="surprise-btn" class="surprise-button animate-on-scroll" onclick="triggerFinale()">
+                    <span>🎉 Click for a Surprise! 🎉</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFETTI CANVAS -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Made with infinite ❤️ by your Akka Sindhu</p>
+            <p class="footer-kannada">ನಿನಗಾಗಿ, ಎಂದೆಂದಿಗೂ — For you, forever ∞</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
